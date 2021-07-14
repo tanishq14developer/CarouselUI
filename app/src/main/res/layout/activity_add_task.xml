@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddTask"
+    android:background="@color/selecticon">
+
+
+    <RelativeLayout
+        android:id="@+id/xxphase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/ic_baseline_search_24" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/backarrow"
+            android:text="Title"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center"
+            android:text="Create New Task"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/design"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:text="Design Meetings"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="350dp"
+            android:layout_height="0.75dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/design"
+            android:background="@color/white" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:text="Saturday, 3 Oct 2020"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_below="@id/date"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/line1"
+            android:layout_width="350dp"
+            android:layout_height="0.75dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/saturday"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/xxphase">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="525dp"
+        android:background="@drawable/upper_rect"
+        android:layout_below="@id/xxphase"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/startime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:text="Start Time" />
+
+        <TextView
+            android:id="@+id/endtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:text="EndTime" />
+
+        <TextView
+            android:id="@+id/timestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_below="@id/startime"
+            android:layout_marginTop="15dp"
+            android:text="4:00"
+            android:textSize="18sp"
+            android:fontFamily="@font/opensans_regular"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startime"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="15dp" />
+        <View
+            android:id="@+id/line3"
+            android:layout_width="150dp"
+            android:layout_height="0.75dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/timestart"
+            android:background="@color/distalgrey" />
+
+        <TextView
+            android:id="@+id/timeend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/endtime"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_marginEnd="125dp"
+            android:text="7:00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/endtime"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="15dp" />
+        <View
+            android:id="@+id/line4"
+            android:layout_width="150dp"
+            android:layout_height="0.75dp"
+            android:layout_marginEnd="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/timestart"
+            android:background="@color/distalgrey" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_below="@id/line3"
+            android:layout_marginTop="30dp"
+            android:text="Description"
+            android:fontFamily="@font/opensans_regular"
+            android:textStyle="bold"
+            android:textColor="@color/distalgrey"/>
+
+        <TextView
+            android:id="@+id/lorem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+
+            android:textColor="@color/distalgrey"
+            android:text="Some text here for the description.More for the description."
+            android:textSize="18sp"/>
+
+
+        <View
+            android:id="@+id/line5"
+            android:layout_width="350dp"
+            android:layout_height="0.75dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/lorem"
+            android:background="@color/distalgrey" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/line5"
+            android:fontFamily="@font/opensans_semibold"
+            android:textColor="@color/distalgrey"
+            android:textSize="22sp"
+            android:text="Category"/>
+        <LinearLayout
+            android:id="@+id/linearphase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/category"
+            android:orientation="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+        <TextView
+            android:id="@+id/marketing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/cat_shape"
+            android:textColor="@color/distalgrey"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:padding="10dp"
+            android:text="Marketing " />
+
+            <TextView
+            android:id="@+id/meeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cat_shape2"
+            android:textColor="@color/white"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:padding="10dp"
+            android:layout_below="@id/category"
+            android:text="Meeting " />
+
+            <TextView
+            android:id="@+id/production"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/cat_shape"
+            android:textColor="@color/distalgrey"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:padding="10dp"
+            android:layout_below="@id/category"
+            android:text="Production" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearphase1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearphase"
+            android:orientation="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:id="@+id/dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/cat_shape"
+                android:textColor="@color/distalgrey"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:text="Dev" />
+            <TextView
+                android:id="@+id/dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:background="@drawable/cat_shape"
+                android:textColor="@color/distalgrey"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:layout_below="@id/category"
+                android:text="DashBoard Design" />
+            <TextView
+                android:id="@+id/ui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:background="@drawable/cat_shape"
+                android:textColor="@color/distalgrey"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:singleLine="true"
+                android:padding="10dp"
+                android:layout_below="@id/category"
+                android:text="UI Design"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/taskcreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearphase1"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:paddingStart="50dp"
+            android:gravity="center"
+            android:paddingEnd="50dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_centerHorizontal="true"
+            android:text="Create Task"
+            android:paddingVertical="20dp"
+            android:background="@drawable/rectangle_task_shape"/>
+    </RelativeLayout>
+            </ScrollView>
+
+</RelativeLayout>
+
+
